@@ -1,0 +1,52 @@
+@font-face {
+    font-family:regular18 ;
+    src: url(./font/Inter_18pt-Regular.ttf);
+}
+@font-face {
+    font-family:bold28 ;
+    src: url(./font/Inter_28pt-Bold.ttf);
+}
+@font-face {
+    font-family:bolditalic;
+    src: url(./font/Inter_18pt-BoldItalic.ttf);
+}
+@font-face {
+    font-family:medium;
+    src: url(./font/Inter_18pt-Medium.ttf);
+}
+body{
+    font-family: regular18 ;
+}
+h4,h3,h2{
+    font-family:bold28 ; 
+    margin-bottom: 15px;
+}
+@media (min-width: 768px) {
+    .h3heading{
+        font-size: 50px;
+    }
+    .h4heading{
+        font-size: 35px;
+    } 
+    .link{
+        font-size:20px;}
+
+}
+@media (max-width: 568px) {
+    .content1{
+        
+        height:634px !important;
+        
+    }
+    .link{
+        font-size:12px;}
+        
+
+}
+p{
+    line-height: 2em;
+}
+.bolditalic{
+    font-family:bolditalic ;
+}
+
