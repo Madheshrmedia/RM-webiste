@@ -817,31 +817,31 @@ include_once "./header.php";
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function () {
-            $(window).on('scroll', function () {
-                const smmRightCol = $('.smm_right_col');
-                const bcdCol = $('.uxui_card_1');
-                const webcretManag = $(".webcret-manag");
+        // $(document).ready(function () {
+        //     $(window).on('scroll', function () {
+        //         const smmRightCol = $('.smm_right_col');
+        //         const bcdCol = $('.uxui_card_1');
+        //         const webcretManag = $(".webcret-manag");
 
-                const triggerPoint = webcretManag.offset().top; // Get the top offset of the smm_right_col element
-                const bcdColPoint = bcdCol.offset().top; // Get the top offset of the bcd_col element
+        //         const triggerPoint = webcretManag.offset().top; // Get the top offset of the smm_right_col element
+        //         const bcdColPoint = bcdCol.offset().top; // Get the top offset of the bcd_col element
 
-                // Add a threshold value to prevent jittering when scrolling near the trigger points
-                const threshold = 50;  // 50px threshold for smoother effect, adjust as needed
+        //         // Add a threshold value to prevent jittering when scrolling near the trigger points
+        //         const threshold = 50;  // 50px threshold for smoother effect, adjust as needed
 
-                // Check if smm_right_col is in view (scroll down past the triggerPoint)
-                if ($(window).scrollTop() + $(window).height() > triggerPoint + threshold) {
-                    smmRightCol.addClass('fixed-position');
-                } else {
-                    smmRightCol.removeClass('fixed-position');
-                }
+        //         // Check if smm_right_col is in view (scroll down past the triggerPoint)
+        //         if ($(window).scrollTop() + $(window).height() > triggerPoint + threshold) {
+        //             smmRightCol.addClass('fixed-position');
+        //         } else {
+        //             smmRightCol.removeClass('fixed-position');
+        //         }
 
-                // Check if bcd_col is in view (scroll down past the bcdColPoint) and remove the fixed-position class
-                if ($(window).scrollTop() + $(window).height() > bcdColPoint + threshold) {
-                    smmRightCol.removeClass('fixed-position');
-                }
-            });
-        });
+        //         // Check if bcd_col is in view (scroll down past the bcdColPoint) and remove the fixed-position class
+        //         if ($(window).scrollTop() + $(window).height() > bcdColPoint + threshold) {
+        //             smmRightCol.removeClass('fixed-position');
+        //         }
+        //     });
+        // });
     </script>
     <?php
     include_once "./footer.php";

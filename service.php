@@ -64,6 +64,66 @@ include_once "./header.php";
     .op_content {
         color: white;
     }
+
+    .op_lastcont {
+        color: white;
+        font-size: 20px;
+    }
+
+    .op_rev {
+        width: 120px;
+    }
+
+    .fsd_frame {
+        color: #B71C1C;
+        text-decoration: none;
+        background: #FFFFFF;
+        padding: 13px 20px;
+        margin-top: 0;
+    }
+
+    .op_row {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .op_btm_cont {
+        background: #000000;
+    }
+
+    .op_btm_head {
+        color: white;
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    .mbih_head {
+        color: #D32F2F;
+        font-size: 50px;
+        line-height: 70px;
+        font-weight: 500;
+    }
+
+    .list_img {
+        width: 29px;
+        margin-right: 15px;
+    }
+
+    .mbih_p {
+        font-size: 22px;
+        margin-bottom: 0px;
+    }
+
+    .mbih_img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .mbih_row {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
 </style>
 
 <body>
@@ -215,11 +275,11 @@ include_once "./header.php";
     <div class="container-fluid op_container">
         <div class="row">
             <div class="col-md-10 mx-auto">
-                <div class="row">
+                <div class="row op_row">
                     <div class="col-md-6">
                         <img src="./image/op-1.webp" class="img-fluid" alt="How to make online presence my business">
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 my-auto">
                         <p class="op_head">
                             Build an online presence
                             for your business
@@ -228,12 +288,78 @@ include_once "./header.php";
                             On a mission to empower <b>D2C brands</b>, to make them a unicorn with
                             phenomenal performance marketing strategies
                         </p>
+
+                        <p class="op_lastcont">
+                            Trusted by hundreds of clients
+                        </p>
+
+                        <div class=" d-flex">
+
+                            <img src="./image/op_rev.webp" class="img-fluid op_rev me-3"
+                                alt="best social marketing agency">
+                            <a href="#" class=" fsd_frame">
+                                Let’s Build Together
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="container-fluid op_btm_cont">
+        <p class="op_btm_head">
+            MORE THAN <span class="op_btm_span">10 LAKHS AD BUDGET</span> MANAGED ACROSS 5+ PLATFORMS IN LAST 6 MONTHS.
+        </p>
+    </div>
+
+    <!-- Make bright ideas happen -->
+    <div class="container mbih_container">
+        <div class="row">
+            <div class="col-md-10 mx-auto">
+                <div class="row mbih_row">
+                    <div class="col-md-6">
+                        <p class="mbih_head">
+                            Make bright ideas
+                            happen
+                        </p>
+                        <div class="mbih_list">
+
+                            <p class="mbih_p"><span><img src="./image/li-img.png" class="list_img"
+                                        alt="best digital marketing agency"></span>Enhanced Retention</p>
+
+                            <p class="mbih_p"><span><img src="./image/li-img.png" class="list_img"
+                                        alt="best digital marketing agency"></span>Rise in Customer Value</p>
+
+                            <p class="mbih_p"><span><img src="./image/li-img.png" class="list_img"
+                                        alt="best digital marketing agency"></span>Creating customer-centric brands</p>
+
+                            <p class="mbih_p"><span><img src="./image/li-img.png" class="list_img"
+                                        alt="best digital marketing agency"></span>Escalation in Aquisition</p>
+
+                            <p class="mbih_p"><span><img src="./image/li-img.png" class="list_img"
+                                        alt="best digital marketing agency"></span>Unique Solutions Approach</p>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="./image/mb.webp" class="img-fluid mbih_img" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Want to schedule a meeting -->
+    <div class="container mb-5 wtsm_container">
+        <div class="row">
+            <div class="col-md-11 mx-auto">
+                <a href="#">
+                    <img src="./image/ctas.webp" class="img-fluid" alt="best IT agency">
+                </a>
+            </div>
+        </div>
+    </div>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
