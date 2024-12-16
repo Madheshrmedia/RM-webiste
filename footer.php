@@ -80,62 +80,15 @@
       gap: 8px !important;
       /* Adjust spacing between the icon and text */
     }
-    .content{
-        background-color: #2C3E50;
-        border: 1px solid #FFFFFF;
-        border-radius: 12px;
-        padding:30px;
-        height:400px;
-        
-    }
-    a{
-        margin-top: 13px;
-    }
-    .link{
-      
-        color:#FFFFFF;
-        font-family:medium;
-    }
-    
-        </style>
-    </head>
 
-    <body>
-        <header>
-            <!-- place navbar here -->
-        </header>
-        <main></main>
-        <footer style=" background-color: #C92828;">
-           <div class="footerbanner">
-            <div class="container">
-            <div class="row g-4 text-left">
-  <div class="col-sm-6 col-md-8">
-    <div class="content content1">
-      <h3 class="h3heading">Don't leave just yet, explore these resources!</h3>
-      <p>#BestDigitalMarketingInChennai #TopSocialMediaAgency #SEOExpertInGuindy #PPCManagementChennai #ContentMarketingSpecialist #GoogleAdsChennai #DigitalMarketingForSmallBusiness #TopSocialMediaMaintainer #DigitalMarketingForSmallBusinesses #AffordableDigitalMarketingChennai #GoogleMyBusinessOptimization 
-        #SocialMediaAdsManagement #BestPPCServicesGuindy #EmailMarketingChennai #SEOConsultantsInChennai #TopMarketingAgencyChennai </p>
-    </div>
-  </div>
-  <div class="col-sm-6 col-md-4">
-  <div class="content">
-    <h4 class="h4heading">Get in Touch</h4>
-    <p>Have a questions?<span class="bolditalic">Contact us</span> </p>
-    <a class="icon-link" href="mailto:example@example.com">
-    <i class="bi bi-telephone-fill"></i>
-    +91 73058 21333
-</a><br>
-    <a class="icon-link" href="mailto:example@example.com">
-    <i class="bi bi-envelope-fill"></i>
-    rainbowmedia@gmail.com
-</a><br>
-<a class="icon-link" href="mailto:example@example.com">
-    <i class="bi bi-geo-alt-fill"></i>
-    Old.No. 83, New no.112,<br>
-2nd floor, Anna salai, Manickam lane<br>
-Guindy, Chennai-600032<br>
-Landmark: Before street of Klase hotel, Guindy<br>
+    .content {
+      background-color: #2C3E50;
+      border: 1px solid #FFFFFF;
+      border-radius: 12px;
+      padding: 30px;
+      height: 400px;
 
-<style>
+    }
 
     a {
       margin-top: 13px;
@@ -155,7 +108,7 @@ Landmark: Before street of Klase hotel, Guindy<br>
   </header>
   <main></main>
 
-  
+
   <footer>
     <div class="footerbanner">
       <div class="container">
