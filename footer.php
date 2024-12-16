@@ -97,6 +97,7 @@
         color:#FFFFFF;
         font-family:medium;
     }
+    
         </style>
     </head>
 
@@ -105,7 +106,7 @@
             <!-- place navbar here -->
         </header>
         <main></main>
-        <footer>
+        <footer style=" background-color: #C92828;">
            <div class="footerbanner">
             <div class="container">
             <div class="row g-4 text-left">

@@ -14,6 +14,14 @@
     font-family:medium;
     src: url(./font/Inter_18pt-Medium.ttf);
 }
+@font-face {
+    font-family:light;
+    src: url(./font/Inter_18pt-Light.ttf);
+}
+@font-face {
+    font-family:italic;
+    src: url(./font/Inter_18pt-Italic.ttf);
+}
 body{
     font-family: regular18 ;
 }
@@ -49,4 +57,3 @@ p{
 .bolditalic{
     font-family:bolditalic ;
 }
-
