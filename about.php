@@ -281,7 +281,7 @@ include_once "./testimonial.php";
 	.testi{
 		background-image: url(./image/testi.png);
 		background-repeat: no-repeat;
-		background-size: contain;
+		background-size: cover;
 		text-align: center;
 		padding-bottom:6rem;
 	}
@@ -349,7 +349,7 @@ include_once "./testimonial.php";
 	.global{
 		background-image: url(./image/tesbanner.webp);
 		background-repeat: no-repeat;
-		background-size: contain;
+		background-size: cover;
 		padding:16rem 0 17rem 0;
 		}
 	.global h2,.global h4{
