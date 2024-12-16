@@ -191,6 +191,7 @@
         .header-text {
             margin-bottom: 0rem !important;
             color: white;
+            font-size: 14px;
         }
 
         .header-link {
@@ -208,7 +209,7 @@
 <body>
     <header class="header header-sticky" id="headerall">
 
-        <div class="topbar py-3 d-none d-lg-flex">
+        <div class="topbar py-2 d-none d-lg-flex">
             <div class="container-fluid d-flex justify-content-center align-items-center text-center">
                 <p class="header-text mx-3">
                     Limited Time Offer: Boost Your Business with 20% Off Our Marketing Packages!
@@ -219,7 +220,7 @@
 
         </div>
 
-        <nav class="navbar navbar-expand-lg navbar-light shadow px-5 py-3 sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light shadow px-5  sticky-top">
             <div class="container-fluid nav-container">
                 <a class="navbar-brand" href="./index.php"><img src="./image/logo.png" alt="cogni logo"
                         class="header-logo"></a>
