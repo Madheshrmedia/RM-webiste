@@ -1,14 +1,143 @@
+
 <style>
-    .footerbanner{
-   background-image: url(./image/footbanner.png);
-   background-repeat: no-repeat;
-   background-size: cover;
-   text-decoration: none;
-   border: 1px solid #FFFFFF;
-   border-radius: 6px;
-   text-align: center;
-   margin-top: 10px;
-            }
+
+.application{
+text-align:center;
+}
+#fomecontainer{
+padding: 40px 30px;
+background-color: #D9EDDD;
+border-radius: 8px;
+}
+#fomecontainer .inputrow{
+background-color: #FFFFFF;
+margin:0.5rem;
+border-radius: 5px;
+text-align:left;
+padding: 18px;
+}
+#fomecontainer .inputrow input ,#fomecontainer .inputrow select,#fomecontainer .inputrow textarea{
+width:100%;
+border: none;
+border-bottom: 1px dotted #000;
+margin-top:13px ;
+height:50px;
+}
+.application h2{
+margin:2rem 0;
+}
+.inputrow label,#resumrow h6{
+font-weight:600;
+}
+#resumrow,#resumrow1{
+text-align:center;
+}
+
 </style>
-<img src="./image/Ln.png alt="instaimage">
-<img src="" alt="">
+
+<div class="application">
+  <h2>Job application form</h2>
+  <div class="container" id="fomecontainer">
+  <form method="post" name="emailContact" onsubmit="return validateForm()">
+  <div class="row"  >
+    <div class="col-sm-6 ">
+      <div class="inputrow">
+      <label for="name">Name <em>*</em></label><br>
+                                <input type="text" name="name"  placeholder="Your Name" required>
+      </div>
+  </div>
+  <div class="col-sm-6">
+  <div class="inputrow">
+  <label for="birthday">DOB <em>*</em></label><br>
+                                <input type="date" id="birthday" name="birthday">
+                                </div>
+  </div>
+  </div>
+  
+  <div class="row"  >
+    <div class="col-sm-6 ">
+      <div class="inputrow">
+      <label for="gender">Gender <em>*</em></label><br>
+      <select id="gender" name="gender">
+                                  <option value="">Select</option>
+                                  <option value="Female">Female</option>
+                                  <option value="Male">Male</option>
+                                </select>
+      </div>
+  </div>
+  <div class="col-sm-6">
+  <div class="inputrow">
+  <label for="phone">Contact Number <em>*</em></label>
+                                <input type="tel" name="phone" placeholder="1234567890" maxlength="10" required>
+                                </div>
+  </div>
+  </div>
+  
+  <div class="row"  >
+  <div class="col-sm-6">
+  <div class="inputrow">
+  <label for="email">Email <em>*</em></label>
+                                <input type="email" name="email" placeholder="user@gmail.com" required>
+                                </div>
+  </div>
+    <div class="col-sm-6 ">
+      <div class="inputrow">
+      <label for="job">Job Title <em>*</em></label><br>
+      <select id="job" name="job">
+                                  <option value="">Select</option>
+                                  <option value="Social Media Manager">Social Media Manager</option>
+                                  <option value="Developer">Digital Marketer</option>
+                                  <option value="UX/UI Designer">Telecaller</option>
+                                </select>
+      </div>
+  </div>
+  
+  
+  </div>
+  
+  <div class="row"  >
+    <div class="col-sm-6 ">
+      <div class="inputrow">
+      <label for="exp">Years of Experience <em>*</em></label><br>
+      <select id="exp" name="exp">
+                                  <option value="">Select</option>
+                                  <option value="0 yr - 1 yr">0 yr - 1 yr</option>
+                                  <option value="1 yr - 2 yr">1 yr - 2 yr</option>
+                                  <option value="2 yr - 3 yr">2 yr - 3 yr</option>
+                                  <option value="3 yr - 4 yr">3 yr - 4 yr</option>
+                                  <option value="4 yr - 5 yr">4 yr - 5 yr</option>
+                                  <option value="above 5 yr">above 5 yr</option>
+                                </select>
+      </div>
+  </div>
+  <div class="col-sm-6">
+  <div class="inputrow">
+  <label for="message">Cover Letter </label><br>
+  <textarea name="message" id="message" cols="5" rows="5" placeholder="Please do not exceed 200 words"></textarea>
+                                </div>
+  </div>
+  </div>
+  
+  <!--<div class="row" id="resumrow" >-->
+  <!--<h6>Upload Your Resume *</h6>-->
+  <!--</div>-->
+  <div class="row"  >
+  <div class="inputrow">
+      <p style="color:red">Send your resume to "rmedia1123.info@gmail.com"</p> 
+  <!--<input type="file" name="resume" accept=".pdf,.doc,.docx,.png" required>-->
+                                </div>
+  </div>
+  <div class="row" id="resumrow1" >
+  <input class="btn btn-primary" type="submit" name="send" value="Submit">
+  <div id="successMessage" class="popup">
+                  <div class="popup-content" >
+                      <span class="close" onclick="closeSuccessMessage(event)">&times;</span>
+                      <p>Successfully submitted form!</p>
+                      <button onclick="closeSuccessMessage(event)" >OK</button>
+                  </div>
+              </div>
+  </div>
+  
+  </div>
+                            </form>
+  </div>
