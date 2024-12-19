@@ -147,9 +147,15 @@ include_once "./header.php";
    
   <img src="./image/Hero-Stack.webp" alt="Hero-Stack" style="width:100%;">
 
-  <div class="centered"> <button type="button" class="btn btn-secondary">Apply Now</button></div>
+  <div class="centered"> <button type="button" class="btn btn-secondary"><a href="#applyform" class="applybut">Apply Now</a></button></div>
 
      </div>
+     <style>
+      .applybut{
+        color: #FFFFFF;
+        text-decoration: none;
+      }
+     </style>
     <!-- --------------------- -->
     <div class="choosecontent">
             <h1>Why Choose Rainbow Media?</h1>
@@ -218,7 +224,7 @@ include_once "./header.php";
     <i class="bi bi-book"></i>
     3+ years
 </a><br>
- <button type="button" class="btn btn-secondary">Apply Now</button>
+ <button type="button" class="btn btn-secondary"> <a href="#applyform" class="applybut">Apply Now</a></button>
  </div>
                 </div>
                 </div>
@@ -242,7 +248,7 @@ include_once "./header.php";
     <i class="bi bi-book"></i>
     Freshers/0+ years
     </a><br>
-    <button type="button" class="btn btn-secondary">Apply Now</button>
+    <button type="button" class="btn btn-secondary"><a href="#applyform" class="applybut">Apply Now</a></button>
     </div>
           </div>
       <div class="col-md-6 col-sm-12 aligncenter fullwidth">
@@ -272,7 +278,7 @@ include_once "./header.php";
     <i class="bi bi-book"></i>
     Freshers/0+ years
     </a><br>
-    <button type="button" class="btn btn-secondary">Apply Now</button>
+    <button type="button" class="btn btn-secondary"><a href="#applyform" class="applybut">Apply Now</a></button>
     </div>
           </div>
      
@@ -282,7 +288,7 @@ include_once "./header.php";
   </div>
 </div>
    <!-- --------form------------- -->
-   <div class="application">
+   <div class="application" id="applyform">
   <h2 class="red">Join Our Team – Application Form</h2>
   <div class="container" id="fomecontainer">
   <form method="post" name="emailContact" onsubmit="return validateForm()">
@@ -369,10 +375,12 @@ include_once "./header.php";
   <!--<h6>Upload Your Resume *</h6>-->
   <!--</div>-->
   <div class="row"  >
+    <div class="col-md-12 col-sm-12">
   <div class="inputrow">
       <p style="color:red">Send your resume to "rmedia1123.info@gmail.com"</p> 
   <!--<input type="file" name="resume" accept=".pdf,.doc,.docx,.png" required>-->
                                 </div>
+  </div>
   </div>
   <div class="row" id="resumrow1" >
   <input class="btn btn-primary" type="submit" name="send" value="Submit" class="submit">
@@ -393,7 +401,7 @@ include_once "./header.php";
 <style>
     #resumrow1 input{
         margin:1rem auto 0 auto !important;
-        width: 13% !important;
+        width: 20% !important;
     }
     .red{
         color:#D32F2F;

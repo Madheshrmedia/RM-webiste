@@ -34,6 +34,16 @@ color:#fd363d !important;
 .foot {
 display: flex;
 }
+.card-body{
+    border-bottom: 1px solid #EFEFEF;
+    border-left: 1px solid #EFEFEF;
+    border-right: 1px solid #EFEFEF;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.card{
+   border:none !important;
+}
 @media (max-width:500px){
   .foot {
 display: block;;
@@ -43,6 +53,14 @@ display: block;;
     padding-right: 1.5rem;
     padding-left: 1.5rem;
 }
+
+}
+
+@media (max-width: 576px) {
+
+ .cardblock {
+    margin-top: 1rem;
+ }
 
 }
    
@@ -109,6 +127,9 @@ display: block;;
 .blog-cards .col-md-4{
     margin: auto;
 }
+#blogdetcontainer img{
+height:300px;
+}
 }
 
             .card-text {
@@ -163,97 +184,89 @@ include_once "./header.php";
 include_once "./footer.php";
 ?>
        
-<script>
+       <script>
     function fetchAndDisplayData() {
         // Get the blog post ID from the URL query parameter
         const urlParams = new URLSearchParams(window.location.search);
         const postId = urlParams.get('id');
         console.log(postId);
+
         // Fetch the blog post details using the postId
         fetch(`https://backendapi.rainbowmedia.co.in/find-blog/${postId}`)
             .then(response => response.json())
             .then(blogPost => {
-                const imagePath="https://backendapi.rainbowmedia.co.in//upload/";
-                const findet=blogPost.findblog;
+                const imagePath = "https://backendapi.rainbowmedia.co.in//upload/";
+                const findet = blogPost.findblog;
                 console.log(findet);
-                // Update the HTML elements with the fetched data
-                // Assuming findet contains the data of the fetched blog post
 
-// Get the container element
-const blogdetcontainer = document.getElementById('blogdetcontainer');
+                // Get the container element
+                const blogdetcontainer = document.getElementById('blogdetcontainer');
 
-// Create the row element
-const row = document.createElement('div');
-row.classList.add('row');
+                // Create the row element
+                const row = document.createElement('div');
+                row.classList.add('row');
 
-// Create the column elements
-const column1 = document.createElement('div');
-column1.classList.add('col-md-8', 'mx-auto', 'mt-5');
+                // Create the image column
+                const columnImage = document.createElement('div');
+                columnImage.style.margin = 'auto';
 
-// Create the title element
-const blogTitle = document.createElement('h2');
-blogTitle.innerText = findet.title;
-const blogParas = document.createElement('p');
-blogParas.innerText = findet.meta_description;
+                const blogImage = document.createElement('img');
+                blogImage.src = imagePath + findet.banner_image;
+                blogImage.classList.add('img-fluid');
+                blogImage.alt = findet.title;
 
-// Append the title element to column1
-column1.appendChild(blogTitle);
-column1.appendChild(blogParas);
-// Append column1 to the row
-row.appendChild(column1);
+                // Adjust width to 100% and height dynamically
+                blogImage.style.width = '100%';
+                blogImage.style.objectFit = 'cover'; // Ensures no distortion by cropping
+                blogImage.style.objectPosition = 'center'; // Centers the image content
 
-// Create the image element
-const column3 = document.createElement('div');
-// column3.style.height = '700px';
-// column3.style.width = '67%';
-column3.style.margin = 'auto';
+                // Function to set height based on screen width
+                function setResponsiveHeight() {
+                    if (window.innerWidth < 575) { // Mobile view
+                        blogImage.style.height = '45vh'; // 45% of viewport height
+                    } else {
+                        blogImage.style.height = '55vh'; // 55% of viewport height
+                    }
+                }
 
-// Function to set height based on screen width
-function setHeightForMobile() {
-if (window.innerWidth < 575) { // Adjust the breakpoint according to your mobile design
-    column3.style.height = '400px'; // Set the desired height for mobile view
-    column3.style.width = '90%';
-} else {
-    column3.style.height = '700px'; // Set the default height for other views
-    column3.style.width = '67%';
-}
-}
+                // Initial height setup and responsive handling
+                setResponsiveHeight();
+                window.addEventListener('resize', setResponsiveHeight);
 
-// Initial call to set height based on initial screen width
-setHeightForMobile();
+                columnImage.appendChild(blogImage);
+                row.appendChild(columnImage); // Append the image column first
 
-// Event listener to adjust height on window resize
-window.addEventListener('resize', setHeightForMobile);
-const blogImage = document.createElement('img');
-blogImage.src = imagePath + findet.banner_image;
-blogImage.classList.add('img-fluid');
-blogImage.alt = findet.title;
+                // Create the title and description column
+                const columnContent = document.createElement('div');
+                columnContent.classList.add('col-md-10', 'mx-auto', 'mt-5');
 
-blogImage.style.width = '100%';
-blogImage.style.height = '100%';
+                // Add the title
+                const blogTitle = document.createElement('h2');
+                blogTitle.innerText = findet.title;
+                blogTitle.style.color = '#D32F2F'; // Sets the text color to red
+                blogTitle.style.fontWeight = 'bold'; // Optionally make the font bold
+               
 
-column3.appendChild(blogImage);
-// Append the image element to the row
-row.appendChild(column3);
+                // Add the meta description
+                const blogParas = document.createElement('p');
+                blogParas.innerText = findet.description;
+                blogParas.style.color = '#425466';
 
-// Create another column element
-const column2 = document.createElement('div');
-column2.classList.add('col-md-8', 'mx-auto', 'mt-5');
+                // Add the main content
+                const blogPara = document.createElement('p');
+                blogPara.classList.add('main-content');
+                blogPara.innerText = findet.meta_description;
 
-// Create the paragraph element for main content
-const blogPara = document.createElement('p');
-blogPara.classList.add('main-content');
-blogPara.innerText = findet.description;
+                // Append content to the column
+                columnContent.appendChild(blogTitle);
+                columnContent.appendChild(blogParas);
+                columnContent.appendChild(blogPara);
 
-// Append the paragraph element to column2
-column2.appendChild(blogPara);
+                // Append the content column to the row
+                row.appendChild(columnContent);
 
-// Append column2 to the row
-row.appendChild(column2);
-
-// Append the row to the container
-blogdetcontainer.appendChild(row);
-
+                // Append the row to the container
+                blogdetcontainer.appendChild(row);
             })
             .catch(error => {
                 console.error('Error fetching blog post:', error);
@@ -263,6 +276,8 @@ blogdetcontainer.appendChild(row);
     // Call the function to fetch and display the data
     fetchAndDisplayData();
 </script>
+
+
 <!-- ------------------------------------------------------------------------------- -->
 <script>
     function fetchAndDisplayDat() {
@@ -289,7 +304,7 @@ for (let i = 1; i < 4; i++) {
  </div>
      <div class="card-body">
          <h5 class="card-title">${blogPost.title}</h5>
-         <p class="card-text">${blogPost.meta_description}</p>
+         
 
          <a href="blog_detail.php?id=${blogPost._id}" class="readmore"  style="text-decoration: none !important;">Read More ></a>
 

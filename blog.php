@@ -64,7 +64,13 @@ display: block;;
 .card-img-top{
     height:100%;
 }
-
+.card-body{
+    border-bottom: 1px solid #EFEFEF;
+    border-left: 1px solid #EFEFEF;
+    border-right: 1px solid #EFEFEF;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
 .card-body a{
     color: #50A9A3 !important;
 }
@@ -110,7 +116,7 @@ display: block;;
 }
 #blogCards{
     max-width: 1300px;
-    padding-top: 7rem;
+    /* padding-top: 7rem; */
     margin: auto
 }
 .card-text{
@@ -119,8 +125,39 @@ display: block;;
 .card-title{
     font-family:SemiBold ;
 }
-.col-md-4{
+.card{
+   border:none !important;
+}
+/* .card .col-md-4{
     padding-top: 15px;
+} */
+ a:hover{
+    color: #FFFF;
+    text-decoration: none;
+ }
+ .blogbanner{
+    background-color: #FFF8F8;
+    padding:7rem 0;
+    overflow-x: hidden;
+ }
+ .blogbanner p{
+width:50%;
+margin:auto;
+ }
+ .blogbanner h1{
+    color: #D32F2F;
+ }
+
+ @media (max-width: 576px) {
+    .blogbanner p{
+width:90%;
+ }
+ .cardblock {
+    margin-top: 1rem;
+ }
+ .blogbanner {
+    padding: 3rem 0;
+}
 }
    </style>
 </head>
@@ -131,6 +168,17 @@ display: block;;
 <?php
 include_once "./header.php";
 ?>
+<div class="blogbanner">
+   <div class="row">
+    <div class="col-md-1 col-sm-1">
+    <img src="./image/blog.png" alt="blog" >
+    </div>
+    <div class="col-md-11 col-sm-11" style="text-align: center;">
+    <h1>Insights<span> <img src="./image/Star.png" alt="blog" ></span>Trends<span> <img src="./image/Star.png" alt="blog" ></span>Inspiration</h1>
+    <p>Stay updated with the latest in digital marketing, branding, and more. Explore our blogs for expert tips and industry insights that help you stay ahead</p>
+    </div>
+   </div> 
+</div>
 <div class="blog-cards mb-5" id="blogCards"></div>
   <script>
     function fetchAndDisplayData() {
@@ -156,8 +204,8 @@ for (let i = 0; i < reversedPosts.length; i++) {
      <img class="card-img-top " src="${imagePath+blogPost.banner_image}" alt="Card image cap">
  </div>
      <div class="card-body">
-         <h5 class="card-title">${blogPost.title}</h5>
-         <p class="card-text">${blogPost.meta_description}</p>
+         <h5 class="card-title" style="color: #000000;font-weight:700">${blogPost.title}</h5>
+       
 
          <a href="blog_detail.php?id=${blogPost._id}" class="readmore"  style="text-decoration: none !important;">Read More ></a>
 

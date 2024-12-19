@@ -4,8 +4,16 @@ include_once "./header.php";
 <link rel="stylesheet" href="style.css">
 
 <style>
-.row{
+/* .row{
     margin:1rem 0;
+} */
+
+@media (max-width: 767px) {
+			
+            #accordionExample{
+       margin-top:1rem;
+    }
+
 }
 #banrow{
     padding-top:4rem;
@@ -48,7 +56,7 @@ include_once "./header.php";
 	flex-direction: column;
 	justify-content: center;
 	box-shadow: 0px 8px 20px rgba(black, 0.4);
-
+	}
 	.video-wrapper {
 		width: 100%;
 		height: 100%;
@@ -61,7 +69,7 @@ include_once "./header.php";
 		height: 100%;
 		border-radius: 27px
 	}
-}
+
 
 .play-button-wrapper {
 	position: absolute;
@@ -298,6 +306,10 @@ include_once "./testimonial.php";
 	}
 </style>
 <!-- ----------------- -->
+ <div class="sidebar">
+ <img src="./image/sidebar.png" alt="sidebar">
+ </div>
+ <!-- ----------------- -->
 <div class="global">
 <div class="container">
 
@@ -346,11 +358,15 @@ include_once "./testimonial.php";
 </div>
 </div>
 <style>
+	.sidebar{
+		background-color: #FCF6F6;
+	}
 	.global{
 		background-image: url(./image/tesbanner.webp);
 		background-repeat: no-repeat;
 		background-size: cover;
-		padding:16rem 0 17rem 0;
+		background-color: #FCF6F6;
+		padding:17rem 0 17rem 0;
 		}
 	.global h2,.global h4{
 		color: #FFFFFF;
@@ -367,6 +383,16 @@ include_once "./testimonial.php";
 	}
 </style>
 <!-- ----------------- -->
+ <!-- ----------------- -->
+ <div class="sidebar1" style=" text-align: right;background-color: #FFFFFF;">
+ <img src="./image/faq.png" alt="faq">
+ </div>
+ <style>
+	.sidebar1{
+		padding-top: 3rem;
+	}
+ </style>
+ <!-- ----------------- -->
 <div class="faq">
 	<div class="container">
 	<div class="row">
@@ -376,10 +402,15 @@ Digital Marketing FAQs
 </h1>
 <p>As a leading digital marketing agency, we are dedicated to providing comprehensive educational resources and answering frequently asked questions to help our clients</p>
 <div class="buttonrow">
-<button type="button firstbut" class="btn btn-primary">More Questions</button>
-<button type="button secondbut" class="btn btn-secondary">Contanct Us</button>	
+<button type="button firstbut" class="btn btn-primary"><a href="./contact.php" class="contact">Contanct Us</a></button>
+<!-- <button type="button secondbut" class="btn btn-secondary">Contanct Us</button>	 -->
 </div>
-	
+	<style>
+		.contact{
+			text-decoration: none;
+			color: #FFFFFF;
+		}
+	</style>
 </div>
 
 		<div class="col-md-6 sm-12">
@@ -404,8 +435,10 @@ Digital Marketing FAQs
     </h2>
     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
+		<p>
+		Digital marketing enhances your website's visibility through SEO techniques that boost rankings on search engine results pages (SERPs). By incorporating targeted keywords and creating high-quality content, you can drive more organic traffic. Strategies like social media marketing, email campaigns, and PPC advertising amplify your reach. 
+		</p>
+       </div>
     </div>
   </div>
   <div class="accordion-item">
@@ -416,8 +449,10 @@ Digital Marketing FAQs
     </h2>
     <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
+    <p>
+	The timeline for seeing results from digital marketing efforts depends on the strategies used, like SEO, content marketing, or PPC campaigns. SEO improvements typically show results in 3-6 months as search engines index your content. Immediate traffic can be achieved through paid advertising, while content marketing builds long-term trust and engagement.
+	</p>  
+	</div>
     </div>
   </div>
   <div class="accordion-item">
@@ -428,8 +463,10 @@ Digital Marketing FAQs
     </h2>
     <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
+    <p>
+	The success of digital marketing campaigns is measured using key metrics like website traffic, conversion rates, and engagement levels. Tools like Google Analytics help track SEO performance, audience behavior, and ROI. Social media insights reveal the reach and impact of your content. Monitoring email open rates and click-through rates (CTR) provides actionable data.
+	</p>   
+	</div>
     </div>
   </div>
 </div>
@@ -440,6 +477,7 @@ Digital Marketing FAQs
 </div>
 <style>
 	.faq{
+		background-color: #FFFFFF;
 		padding:7rem 0;
 	}
 	.faq h1{

@@ -128,15 +128,15 @@
             <div class="content">
               <h4 class="h4heading">Get in Touch</h4>
               <p>Have a questions?<span class="bolditalic">Contact us</span> </p>
-              <a class="icon-link" href="mailto:example@example.com">
+              <a class="icon-link" href="#">
                 <i class="bi bi-telephone-fill"></i>
                 +91 73058 21333
               </a><br>
-              <a class="icon-link" href="mailto:example@example.com">
+              <a class="icon-link" href="mailto:rmedia1123.info@gmail.com">
                 <i class="bi bi-envelope-fill"></i>
                 rainbowmedia@gmail.com
               </a><br>
-              <a class="icon-link" href="mailto:example@example.com">
+              <a class="icon-link" href="#">
                 <i class="bi bi-geo-alt-fill"></i>
                 Old.No. 83, New no.112,<br>
                 2nd floor, Anna salai, Manickam lane<br>
@@ -160,43 +160,43 @@
           <div class="row footerrow">
             <div class="col">
 
-              <a class="link" href="">About Us</a>
+              <a class="link" href="./about.php">About Us</a>
 
             </div>
             <div class="col">
 
-              <a class="link" href="">Services</a>
+              <a class="link" href="./service.php">Services</a>
 
             </div>
             <div class="col">
-              <a class="link" href="">Contact Us</a>
+              <a class="link" href="./contact.php">Contact Us</a>
             </div>
             <div class="col">
-              <a class="link" href="">Careers</a>
+              <a class="link" href="./career.php">Careers</a>
             </div>
           </div>
           <div class="row footerrow2">
             <div class="col">
 
-              <a class="link" href="">
+              <a class="link" href="https://instagram.com/rainbowmedia_digital?igshid=ZDdkNTZiNTM=" target="_blank">
                 <img src="./image/insta.png" alt="instaimage">
               </a>
 
             </div>
             <div class="col">
 
-              <a class="link" href="">
+              <a class="link" href="https://www.facebook.com/profile.php?id=100091745963846" target="_blank">
                 <img src="./image/fcb.png" alt="fcbimage">
               </a>
 
             </div>
             <div class="col">
-              <a class="link" href="">
+              <a class="link" href="https://www.linkedin.com/company/rainbow-media/" target="_blank">
                 <img src="./image/Ln.png" alt="lnimage">
               </a>
             </div>
             <div class="col">
-              <a class="link" href="">
+              <a class="link" href="https://twitter.com/rmedia_digital?t=g6071ALXzJJGwoHnHE6rCA&s=08" target="_blank">
                 <img src="./image/twit.png" alt="twitterimage">
               </a>
             </div>

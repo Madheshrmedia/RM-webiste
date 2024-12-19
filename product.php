@@ -57,6 +57,9 @@
             .padleft{
         padding-left:10px !important;
     }
+    .btn-secondary,.imgframe h1{
+        margin-top: 1rem;
+    }
    
 		}
 </style>
@@ -113,12 +116,18 @@ BILL IT NOW –
     <li>Your All-in-One Billing Solution</li>
 </ul>
 <div class="buttonrow">
-<button type="button firstbut" class="btn btn-primary">Explore Now</button>
+<button type="button firstbut" class="btn btn-primary"><a href="./billitnow.php" class="explore">Explore Now</a></button>
 </div>
 </div>
     </div>
 </div>
 </div>
+<style>
+    .explore{
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+</style>
       <!-- --------------------- -->
 
 </body>
